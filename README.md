@@ -19,10 +19,9 @@ For this small project I chose to write API integration tests. I know unit tests
   - Download and install from https://www.ruby-lang.org/en/downloads/releases/
 - Bundler (2.5.11 recommended)
 
- 
-## 1) Download Project and Unzip from Replit
-### From the replit files browser, click the more options menu and select `Download as zip`
-### Unzip the file in a local directory of your choice
+## Option 2: Clone Repo
+`git clone https://github.com/zaneil/brightwheel-assignment.git`
+
 ## 2a)Local Setup (Mac)
 ### Open Terminal on your Mac
 ### Navigate to brightwheel-assignment
@@ -57,34 +56,7 @@ should output...
 Server Running
 ```
 
-# How to run directly in replit
-### Run tests
-Open Shell and run... 
-`bundle exec rspec`
-should out something like...
-```
-Finished in 0.01959 seconds (files took 0.22066 seconds to load)
-20 examples, 0 failures
-```
 
-### Start server
-Click the Green "Run" button
-
-Console should output something like... 
-```
-[2024-06-13 14:17:10] INFO  WEBrick 1.8.1
-[2024-06-13 14:17:10] INFO  ruby 3.3.2 (2024-05-30) [x86_64-darwin22]
-== Sinatra (v4.0.0) has taken the stage on  for development with backup from WEBrick
-[2024-06-13 14:17:10] INFO  WEBrick::HTTPServer#start: pid=69920 port=8080
-```
-
-#### Check server is running
-Open a Shell and run
-`curl -X GET http://localhost:8080`
-should output... 
-```
-Server Running
-```
 # API Documentation
 See DOCUMENTATION.md file
 
@@ -134,10 +106,10 @@ See DOCUMENTATION.md file
 - If the second reading is arrives/is processed first, then a consumer polls the GET it will show latest_timestamp of t2 but only include the second device reading.
 - This edge case may be a non issue, but depends on how the device GET is being used and likelihood of this occuring and mattering. 
 
-# Future Improvements for production
+# Future Improvements
 - Add logging
 - ENV variables + parameterize for production/staging envs
-- possible dockerize
+- dockerize
 - Add Makefile for easy setup/running/tests etc...
 - Add auth for security considerations
 - Post response should include summary readings in response?
