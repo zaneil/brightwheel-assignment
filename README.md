@@ -14,12 +14,12 @@ For this small project I chose to write API integration tests. I know unit tests
 
 # How to run locally
 
-## Prequisites
+## 0) Prequisites
 - Ruby (3.2.2 recommended)
   - Download and install from https://www.ruby-lang.org/en/downloads/releases/
 - Bundler (2.5.11 recommended)
 
-## Option 2: Clone Repo
+## 1) Clone Repo
 `git clone https://github.com/zaneil/brightwheel-assignment.git`
 
 ## 2a)Local Setup (Mac)
