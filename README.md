@@ -91,7 +91,7 @@ See DOCUMENTATION.md file
   - Currently we are updating summary and storing in memory after successful post.
   - Alternatively, this could be calclated at run time, but that would slow down get requests as readings are added. 
 
-## Calculating Summary Values after post (instead of at run time)
+## Calculating Device Summary Values by aggregating all device reading (instead of doing a delta analysis)
 - We retrieve all stored readings for the device aggregate the cumulative count and latest timestamp. This is not as efficient as doing delta updates (to existing cumulative_count and comparing against latest_timestamp),
 - it's more robust with less chance of summary getting out of sync with stored data. It also leaves open the possibility of implementing some conditional business logic and keeps code simpler. Of course, delta analysis may be necessary depending on the number of readings/device and SLA.
 
